@@ -1,3 +1,3 @@
 # Azərbaycan adları
 Azərbaycan adlarının mənalarının http://data.gov.az/ vasitəsi ilə əldə edilməsi.
-http://samadov.net
+http://www.anarsamadov.net
