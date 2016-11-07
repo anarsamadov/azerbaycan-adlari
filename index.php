@@ -41,8 +41,8 @@
         if ($json)
         {
             echo '<div class="panel panel-default">
-						  <div class="panel-heading"><strong>Axtarılan ad: </strong>'.$_POST["ad"].'</div> 
-	  					  <div class="panel-body">';
+				<div class="panel-heading"><strong>Axtarılan ad: </strong>'.$_POST["ad"].'</div> 
+	  			<div class="panel-body">';
             foreach ($json as $js)
             {
                 echo $json["response"]["name_meaningField"];
@@ -56,6 +56,9 @@
     }
 
     ?>
+
+    <hr>
+    <p class="text-center"><a href="http://www.anarsamadov.net">anar samadov</a></div>
 </div>
 
 
