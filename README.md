@@ -1,2 +1,3 @@
-# azerbaycan-adlari
-Azərbaycan adlarının mənası.
+# Azərbaycan adları
+Azərbaycan adlarının mənalarının http://data.gov.az/ vasitəsi ilə əldə edilməsi.
+http://samadov.net
