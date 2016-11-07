@@ -41,7 +41,7 @@
         if ($json)
         {
             echo '<div class="panel panel-default">
-						  <div class="panel-heading"><strong>Axtarılan ad: </strong>'.$_POST["ad"].'</div>
+						  <div class="panel-heading"><strong>Axtarılan ad: </strong>'.$_POST["ad"].'</div> 
 	  					  <div class="panel-body">';
             foreach ($json as $js)
             {
