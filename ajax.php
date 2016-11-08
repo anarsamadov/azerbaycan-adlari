@@ -7,12 +7,11 @@
         if ($json)
         {
             echo '<div class="panel panel-default">
-                <div class="panel-heading"><strong>Axtarılan ad: </strong>'.$_POST["ad"].'</div> 
+                <div class="panel-heading"><strong>Axtarılan ad: </strong>'.$json["response"]["nameField"].'</div> 
                 <div class="panel-body">';
-            foreach ($json as $js)
-            {
+
                 echo $json["response"]["name_meaningField"];
-            }
+
             echo '</div></div>';
         }
     }
