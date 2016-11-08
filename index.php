@@ -17,52 +17,28 @@
 </head>
 <body>
 <div class="container">
-    <h1>Azərbaycan adlarının mənası</h1>
-    <form method="post" action="">
-        <div class="panel panel-success">
-            <div class="panel-body">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="adı daxil edin.." name="ad">
-                    <span class="input-group-btn">
-			        <button type="submit" class="btn btn-default" type="button">Axtar!</button>
-			      </span>
-                </div><!-- /input-group -->
-            </div>
+        <br>
+        <div class="jumbotron">
+          <h3><strong>Azərbaycan adlarının mənası</strong></h3>
+          <p><a href="http://data.gov.az">data.gov.az</a> servislərindən istifadə edərək Ədliyyə Nazirliyi tərəfindən təqdim edilən elektron xidmətlərə əsasən Azərbaycan adları barədə məlumatın verilməsi.</p>
         </div>
-    </form>
-
-
-    <?php
-    $string = @file_get_contents("http://data.e-gov.az/api/v1/IEGOVService.svc/GetMeaningOfName/".urlencode($_POST["ad"]));
-    $json = json_decode($string, true);
-
-    if($json["fault"]["faultCode"]==0)
-    {
-        if ($json)
-        {
-            echo '<div class="panel panel-default">
-				<div class="panel-heading"><strong>Axtarılan ad: </strong>'.$_POST["ad"].'</div> 
-	  			<div class="panel-body">';
-            foreach ($json as $js)
-            {
-                echo $json["response"]["name_meaningField"];
-            }
-            echo '</div></div>';
-        }
-    }
-    else
-    {
-        echo "Məlumat tapılmadı!";
-    }
-
-    ?>
-
+        
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="adı daxil edin.." name="ad" id="ad">
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-danger" type="submit" id="axtar">Axtar!</button>
+            </span>
+        </div><!-- /input-group -->
+    <br>
+    <div class="result"></div>
+    
     <hr>
-    <p class="text-center"><a href="http://www.anarsamadov.net">anar samadov</a></div>
+    <p class="text-center">developed by <a href="http://www.anarsamadov.net">anar samadov</a></div>
 </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
